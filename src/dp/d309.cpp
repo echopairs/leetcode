@@ -21,7 +21,7 @@ public:
             buy[i] = max(buy[i-1], cooldown[i-1]-prices[i])
 
             // 第i天为cooldown, 则第i-1天可以为cooldown或者第i-1天为sell
-            sell[i] = max(cooldown[i-1], sell[i-1]);
+            cooldown[i] = max(cooldown[i-1], sell[i-1]);
 
             初始值：
             buy[0] = -prices[0];
